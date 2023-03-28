@@ -1,0 +1,23 @@
+{
+  "name": "plant-io",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev-server": "npm run dev --prefix server",
+    "dev-client": "npm start --prefix client",
+    "dev": "concurrently \"npm run dev-server\" \"npm run dev-client\"",
+    "install-all": "npm install && npm install --prefix client && npm install --prefix server",
+    "heroku-postbuild": "npm install --prefix client && npm run build --prefix client && npm install --prefix server",
+    "start": "cd server && node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^7.1.0"
+  },
+  "dependencies": {
+    "queue-microtask": "^1.2.3"
+  }
+}

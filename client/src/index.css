@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  box-sizing: border-box;
+}
+
+body
+{
+  font-family: "Roboto", sans-serif;
+}
+
+div.plant{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 700px) {
+  div.plant{
+      grid-template-columns: .9fr 1.1fr;
+  }
+}
+div.plant div.texts h2{
+  margin:0;
+  font-size: 2rem;
+}
+
+div.plant p.info{
+  margin:24px 0;
+  color: #888;
+  font-size:1rem;
+  font-weight: bold;
+  display: flex;
+  gap: 10px;
+}
+div.plant p.info h3.author{
+  color:#333;
+}
+div.plant div.plant-image{
+  display: flex;
+  object-fit: scale-down;
+  width: 50%;
+}
+div.plant p.summary{
+  margin:10px 0;
+  line-height: 1.8rem;
+}
